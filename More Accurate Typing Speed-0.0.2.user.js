@@ -18,6 +18,7 @@ new MutationObserver(getScoreboard).observe(document.body, {subtree: true, child
 function getScoreboard(mutations_list) {
     let avg = document.getElementsByClassName('lblWpm')[0];
     avg.textContent = avg.title.substring(0, avg.title.lastIndexOf(" "));
+	
     for (let mutation of mutations_list){
         for (let node of mutation.addedNodes){
             if (node.className === "tblOwnStatsNumber"){
