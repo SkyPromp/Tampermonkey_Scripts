@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         More Accurate Typing Speed
 // @namespace    http://tampermonkey.net/
-// @version      0.0.3
+// @version      0.0.4
 // @description  Show more tying speed digits after a race on TypeRacer
 // @author       SkyPromp
 // @match        https://play.typeracer.com/
@@ -18,6 +18,7 @@ new MutationObserver(getScoreboard).observe(document.body, {subtree: true, child
 function getScoreboard(mutations_list) {
     let avg = document.getElementsByClassName('lblWpm')[0];
     avg.textContent = avg.title.substring(0, avg.title.lastIndexOf(" "));
+    handleStats(document.querySelectorAll(".gwt-Label"));
 	
     for (let mutation of mutations_list){
         for (let node of mutation.addedNodes){
