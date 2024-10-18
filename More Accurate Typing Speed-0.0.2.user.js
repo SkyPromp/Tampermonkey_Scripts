@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         More Accurate Typing Speed
 // @namespace    http://tampermonkey.net/
-// @version      0.0.2
+// @version      0.0.3
 // @description  Show more tying speed digits after a race on TypeRacer
 // @author       SkyPromp
 // @match        https://play.typeracer.com/
